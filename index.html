@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To‑Do App</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+  <main class="app">
+    <section class="card" aria-labelledby="app-title">
+      <header>
+        <h1 id="app-title">To‑Do List</h1>
+        <div class="small" style="margin-left:auto;color:var(--muted)">Tips: press Enter to add</div>
+      </header>
+
+      <div class="new-task">
+        <input id="task-input" type="text" placeholder="Add a new task..." aria-label="New task" />
+        <button id="add-btn" class="btn btn-primary">Add</button>
+      </div>
+
+      <div class="list" aria-live="polite">
+        <ul id="tasks" class="tasks"></ul>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="active">Active</button>
+        <button data-filter="completed">Completed</button>
+        <button id="clear-completed" style="margin-left:auto" class="btn btn-ghost">Clear completed</button>
+      </div>
+
+      <div class="bottom">
+        <div class="count" id="count">0 items</div>
+        <div class="actions">
+          <button id="select-all" class="btn btn-ghost">Toggle All</button>
+        </div>
+      </div>
+    </section>
+  </main>
+ <script src="script.js"></script>
+</body>
+</html>
